@@ -1,14 +1,50 @@
 'use strict';
 
-class Posts {
-    constructor(param) {
+class Twitter {
+    constructor(listElem) {
         super();
-        this.tweets = param.post;
+        this.tweets = new Posts({});
+        this.elements = {
+            listElem: document.querySelector(listElem)
+        }
+    }
+
+    renderPosts() {
+
+    }
+
+    changeSort() {
+
+    }
+
+    showUserPost() {
+
+    }
+
+    showLikePost() {
+
+    }
+
+    showAllPost() {
+
+    }
+
+    openMpdal() {
+
+    }
+}
+
+class Posts {
+    constructor({
+        posts = []
+    }) {
+        super();
+        this.posts = posts;
     }
 
     addPost(tweet) {
-        const post = new Post(tweet);
-        this.tweets.push(post);
+        const post = new Post(post);
+        this.posts.push(post);
     }
 
     deletePost(id) {
@@ -16,7 +52,7 @@ class Posts {
     }
 
     likePost(id) {
-        
+
     }
 }
 
@@ -42,3 +78,7 @@ class Post {
         }
     }
 }
+
+new Twitter({
+    listElem: '.tweet-list'
+})
